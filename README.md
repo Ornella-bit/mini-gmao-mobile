@@ -9,8 +9,8 @@ Elle se connecte à l'API du projet [mini-gmao](https://github.com/Ornella-bit/m
 <p align="center">
   <img src="captures/liste.jpeg" width="220" alt="Liste des équipements">
   <img src="captures/recherche.jpeg" width="220" alt="Recherche">
-  <img src="captures/fiche.jpeg" width="220" alt="Fiche d'un équipement">
   <img src="captures/formulaire.jpeg" width="220" alt="Saisie d'une intervention">
+  <img src="captures/fiche.jpeg" width="220" alt="Fiche d'un équipement">
 </p>
 
 ## Fonctionnalités
