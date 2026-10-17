@@ -2,9 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
-const String apiUrl = 'https://ashley.pythonanywhere.com/api';
-const Color bleu = Color(0xFF1F3A5F);
+import 'config.dart';
+import 'detail_page.dart';
 
 void main() => runApp(const MiniGmaoApp());
 
@@ -120,6 +119,15 @@ class _EquipementsPageState extends State<EquipementsPage> {
                 final couleur = _couleurEtat(etat);
                 return Card(
                   child: ListTile(
+                                        onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => DetailPage(
+                          equipementId: e['id'] as int,
+                          nom: e['nom'].toString(),
+                        ),
+                      ),
+                    ).then((_) => _recharger()),
                     leading: const Icon(Icons.precision_manufacturing, color: bleu),
                     title: Text(e['nom'].toString(),
                         style: const TextStyle(fontWeight: FontWeight.bold)),
